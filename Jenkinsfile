@@ -6,9 +6,8 @@ node {
      commit_id = readFile('.git/commit-id').trim()
    }
    stage('test') {
-     nodejs(nodeJSInstallationName: 'nodejs') {
-       sh 'echo Pipeline succeed'
+     
+      sh 'echo Pipeline succeed  ${commit-id}'
      }
-   }
  
 }
